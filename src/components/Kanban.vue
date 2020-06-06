@@ -123,7 +123,7 @@
           newState = this.machine.transition(source.dataset.status, transition).value;
         }
 
-        this.$emit('update-block', block.dataset.blockId, newState, index);
+        this.$emit('update-block', block.dataset.blockId, block, newState, index);
       })
       .on('cancel', (el, container, source) => {
         this.$emit('cancel', el, container, source);
